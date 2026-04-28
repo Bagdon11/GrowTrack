@@ -1,0 +1,30 @@
+[
+  {
+    "id": "carrot-chantenay-nz-v1",
+    "name": "Carrot",
+    "variety": "Chantenay / Nantes / Danvers",
+    "base_temp": 4,
+    "gdd_to_maturity": 750,
+    "days_to_germination": 12,
+    "water_interval_days": 3,
+    "fertilise_interval_days": 21,
+    "spacing_cm": 8,
+    "description": "Sow Mar–May & Aug–Sep in shallow, cool soil. Harvest in 6–8 weeks.",
+    "season": "autumn,spring",
+    "frost_tolerant": 1
+  },
+  {
+    "id": "beetroot-detroit-nz-v1",
+    "name": "Beetroot",
+    "variety": "Detroit Globe / Bull's Blood",
+    "base_temp": 4,
+    "gdd_to_maturity": 650,
+    "days_to_germination": 10,
+    "water_interval_days": 3,
+    "fertilise_interval_days": 21,
+    "spacing_cm": 10,
+    "description": "Sow Feb–May & Aug–Sep. Cool temps deepen colour. Harvest 6–8 weeks.",
+    "season": "autumn,spring",
+    "frost_tolerant": 1
+  }
+]

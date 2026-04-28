@@ -3,17 +3,20 @@
     "name": "GrowTrack",
     "slug": "GrowTrack",
     "version": "1.0.0",
+    "description": "Track your vegetable garden with Growing Degree Days (GDD) — know exactly when to water, fertilise, and harvest based on real local weather data.",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bagdon11.GrowTrack",
+      "buildNumber": "1"
     },
     "android": {
       "adaptiveIcon": {
@@ -21,10 +24,47 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.INTERNET",
+        "android.permission.WAKE_LOCK",
+        "android.permission.CAMERA",
+        "android.permission.READ_MEDIA_IMAGES"
+      ],
+      "package": "com.bagdon11.GrowTrack"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-sqlite",
+      [
+        "expo-notifications",
+        {
+          "androidMode": "default"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "GrowTrack uses your location to fetch local weather data for accurate GDD calculations."
+        }
+      ],
+      "expo-background-task",
+      "expo-task-manager",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "GrowTrack uses your photo library to attach pictures to plant journal entries.",
+          "cameraPermission": "GrowTrack uses your camera to photograph plant progress in your journal."
+        }
+      ],
+      "expo-background-task"
+    ]
   }
 }
